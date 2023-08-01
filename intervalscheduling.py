@@ -46,7 +46,7 @@ def binary(num, digits):
 class Solution:
     def interval_scheduling(self, intervals):
       output=[]
-      intervals.sort(key=lambda intervals: intervals[0])
+      intervals.sort(key=lambda intervals: intervals[1])
       length = len(intervals)
       # print(intervals)
       for i in range(2 ** length):
@@ -62,7 +62,7 @@ class Solution:
         for j in range(length2-1):
           if aux2[j+1][0]<aux2[j][1]:
             isvalid=False
-        if len(output)<=length2 and isvalid:
+        if len(output)<length2 and isvalid:
           output=aux2
       return output
 
