@@ -62,7 +62,7 @@ class Solution:
         for j in range(length2-1):
           if aux2[j+1][0]<aux2[j][1]:
             isvalid=False
-        if len(output)<length2 and isvalid:
+        if len(output)<=length2 and isvalid:
           output=aux2
       return output
 
